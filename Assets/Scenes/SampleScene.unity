@@ -490,6 +490,7 @@ GameObject:
   - component: {fileID: 1513810223}
   - component: {fileID: 1513810222}
   - component: {fileID: 1513810221}
+  - component: {fileID: 1513810224}
   m_Layer: 5
   m_Name: Count Text
   m_TagString: Untagged
@@ -528,7 +529,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d98307d4b65d11d4b9c9df46c3b54067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _label: {fileID: 1513810222}
 --- !u!114 &1513810222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,6 +571,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1513810219}
   m_CullTransparentMesh: 1
+--- !u!114 &1513810224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513810219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e182ee78c6574e40821e56f7e060f15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _label: {fileID: 1513810222}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
