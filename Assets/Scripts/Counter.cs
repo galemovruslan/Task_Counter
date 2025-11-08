@@ -11,7 +11,7 @@ public class Counter : MonoBehaviour
     private int _value = 0;
     private Coroutine _coroutine;
 
-    private event Action<int> _counted;
+    public event Action<int> Counted;
 
     private void Update()
     {
@@ -24,12 +24,12 @@ public class Counter : MonoBehaviour
 
     public void Subscribe(Action<int> action)
     {
-        _counted += action;
+        Counted += action;
     }
 
     public void Unsubscribe(Action<int> action)
     {
-        _counted -= action;
+        Counted -= action;
     }
 
     private void ToggleCounter()
@@ -49,12 +49,14 @@ public class Counter : MonoBehaviour
 
     private IEnumerator Counting()
     {
+        var wait = new WaitForSeconds(_delay);
+
         while (_isRun)
         {
-            yield return new WaitForSeconds(_delay);
+            yield return wait;
 
             ++_value;
-            _counted?.Invoke(_value);
+            Counted?.Invoke(_value);
         }
     }
 }
